@@ -13,6 +13,14 @@ const createScene = async () => {
   camera.attachControl(true);
   //camera.inputs.addMouseWheel();
   //camera.setTarget(BABYLON.Vector3.Zero());
+
+  camera.setPosition(new BABYLON.Vector3(0, 0, -20));
+  camera.lowerBetaLimit = Math.PI /4;
+  camera.upperBetaLimit = Math.PI /2;
+
+  camera.lowerRadiusLimit = 20;
+  camera.upperRadiusLimit = 50;
+
 /*
   const groundFromHM = BABYLON.MeshBuilder.CreateGroundFromHeightMap('ground', '/heightmap.png', {
     width: 10,
